@@ -92,4 +92,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(QrCampaign::class, 'created_by');
     }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
 }
