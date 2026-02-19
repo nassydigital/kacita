@@ -22,6 +22,9 @@
                         <flux:sidebar.item icon="chart-bar" :href="route('admin.dashboard')" :current="request()->routeIs('admin.dashboard')" wire:navigate>
                             {{ __('Admin Dashboard') }}
                         </flux:sidebar.item>
+                        <flux:sidebar.item icon="users" :href="route('admin.members.index')" :current="request()->routeIs('admin.members.*')" wire:navigate>
+                            {{ __('Members') }}
+                        </flux:sidebar.item>
                     </flux:sidebar.group>
                 @endif
             </flux:sidebar.nav>
